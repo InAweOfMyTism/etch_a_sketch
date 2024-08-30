@@ -39,7 +39,8 @@ function createGrid() {
     for (let i = 0; i < 16; i++){
         let squareArea = document.createElement('div');
         squareArea.classList.add('square');
-        squareArea.addEventListener('mouseover', draw(squareArea));
+        squareArea.addEventListener('mousemove', draw(squareArea));
+        squareArea.style.backgroundColor = 'white';
         sketchArea.appendChild(squareArea);
     }
     
@@ -52,4 +53,8 @@ function draw(area) {
 
 function clear() {
     //remove all squares
+    while (sketchArea.firstChild) {
+        sketchArea.removeChild(firstChild);
+    }
+    createGrid();
 }
