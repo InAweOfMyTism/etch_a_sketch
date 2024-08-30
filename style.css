@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
 .container{
@@ -16,5 +16,15 @@ body {
     height: 512px;
     width: 512px;
     margin: 3em 0 3em 0;
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
+}
+
+.square{
+    height: 124px;
+    width: 124px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid black;
 }

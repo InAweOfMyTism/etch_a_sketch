@@ -15,10 +15,16 @@
 //get info
 
     //get sketch element and button element
-    //divide size of button element by 4 to get square size
- 
-//create grid
+//divide size of button element by 4 to get square size
 
+const sketchArea = document.getElementById('sketch-area');
+const resetBtn = document.getElementById('reset-btn');
+
+
+
+
+//create grid
+createGrid();
 //add listener to reset button
 
     //remove squares
@@ -29,11 +35,19 @@ function createGrid() {
     //create element
     //add event listener for hover event
     //add draw function to EL
+
+    for (let i = 0; i < 16; i++){
+        let squareArea = document.createElement('div');
+        squareArea.classList.add('square');
+        squareArea.addEventListener('mouseover', draw(squareArea));
+        sketchArea.appendChild(squareArea);
+    }
     
 }
 
-function draw() {
+function draw(area) {
     //change background color to black
+    area.style.backgroundColor = 'black';
 }
 
 function clear() {
