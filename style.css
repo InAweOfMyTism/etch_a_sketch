@@ -14,8 +14,6 @@ body {
 #sketchArea{
     margin: 2em;
     border: 5px solid black;
-    height: 512px;
-    width: 512px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -30,4 +28,6 @@ body {
 .pixel{
     box-sizing: border-box;
     border: 2px solid darkblue; 
+    height: 10px;
+    width: 10px;
 }
