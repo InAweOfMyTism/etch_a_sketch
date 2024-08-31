@@ -12,10 +12,12 @@ body {
 }
 
 #sketchArea{
-    border: 2px solid black;
+    margin: 2em;
+    border: 5px solid black;
     height: 512px;
     width: 512px;
-    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #resetButton{
@@ -25,7 +27,7 @@ body {
     border-radius: 2em;
 }
 
-#pixel{
-    border: 1px solid black;
-    
+.pixel{
+    box-sizing: border-box;
+    border: 2px solid darkblue; 
 }
