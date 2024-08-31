@@ -5,7 +5,7 @@ const resetButton = document.getElementById('resetButton');
 
 createGrid(4);
 
-resetButton.addEventListener('click', reloadGrid());
+resetButton.onclick = reloadGrid;
 
 function createGrid(sideLength) {
 
@@ -13,9 +13,6 @@ function createGrid(sideLength) {
     sketchArea.style.height = '760px';
 
     let pixelSize = parseInt(sketchArea.style.width) / sideLength;
-
-    console.log(sketchArea.style.width);
-    console.log(pixelSize);
 
     for (let i = 0; i < sideLength * sideLength; i++){
 
@@ -46,7 +43,7 @@ function reloadGrid() {
         removeGrid();
         createGrid(sideLength);
     } else {
-        sideLength = prompt('enter a number less than 100');
+        sideLength = prompt('enter an integer less than 101');
         removeGrid();
         createGrid(sideLength);
     }
