@@ -16,6 +16,8 @@ body {
     border: 5px solid black;
     display: flex;
     flex-wrap: wrap;
+    width: 760px;
+    height: 760px;
 }
 
 #resetButton{
