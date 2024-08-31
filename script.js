@@ -1,9 +1,3 @@
-/* 
-
-1. wait until document has loaded
-2. add area and reset btn 
-
-*/
 
 const container = document.getElementById('container')
 const sketch_width = 512;
@@ -32,8 +26,9 @@ function createGrid() {
             newSquare.classList.add('pixel');
             newSquare.style.width = square_width;
             newSquare.style.height = square_height;
-            console.log(newSquare);
-            newSquare.addEventListener('mouseleave', colorPixel(Event.target));
+            newSquare.addEventListener('mouseover', (event) => {
+                event.target.style.backgroundColor = 'black';
+            });
             sketchArea.appendChild(newSquare);
         }
     }
@@ -52,8 +47,4 @@ function createResetButton() {
     container.appendChild(resetButton);
 
 
-}
-
-function colorPixel(pixel) {
-    pixel.style.backgroundColor = 'black';
 }
